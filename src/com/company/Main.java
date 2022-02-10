@@ -19,24 +19,7 @@ public class Main {
             } else if (choice.equals("update")) {
                 System.out.print("Name of anime to update: ");
                 String updatedInput = in.nextLine();
-                while (true) {
-                    System.out.println("Would you like to Update for this anime? The [name], [description], how many [seasons] there are, change the [favorite], or go [back]?");
-                    System.out.print("> ");
-                    String updateStr = in.nextLine();
-                    if (updateStr.equals("name")) {
-                        Update.updateName(updatedInput);
-                    } else if (updateStr.equals("description")) {
-                        Update.updateDescription(updatedInput);
-                    } else if (updateStr.equals("seasons")) {
-                        Update.updateSeasons(updatedInput);
-                    } else if (updateStr.equals("favorite")) {
-                        Update.updateFavorite(updatedInput);
-                    } else if (updateStr.equals("back")) {
-                        break;
-                    } else {
-                        System.out.println("wrong Input");
-                    }
-                }
+                Condition.isAInput(updatedInput);
 
             } else if (choice.equals("delete")) {
                 RemoveAnime.delete();
